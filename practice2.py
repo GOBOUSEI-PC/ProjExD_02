@@ -47,14 +47,14 @@ def main():
     vx, vy = +5, +5  # 練習２：爆弾の速度
 
     clock = pg.time.Clock()
-    tmr = 0
+    
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: 
                 return
         if kk_rct.colliderect(bd_rct):
             print("ゲームオーバー")
-            
+            return
             
         screen.blit(bg_img, [0, 0])
 
